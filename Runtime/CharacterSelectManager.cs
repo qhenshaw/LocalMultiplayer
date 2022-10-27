@@ -8,19 +8,19 @@ namespace CharacterSelect
 {
     public class CharacterSelectManager : MonoBehaviour
     {
-        [SerializeField] private PlayerColors _playerColors;
-        [SerializeField] private PlayerInfoEventAsset _playerJoinedEvent;
-        [SerializeField] private PlayerList _joinedList;
-        [SerializeField] private PlayerList _readyList;
-        [SerializeField] private string _gameplayScene;
+        [SerializeField] protected PlayerColors _playerColors;
+        [SerializeField] protected PlayerInfoEventAsset _playerJoinedEvent;
+        [SerializeField] protected PlayerList _joinedList;
+        [SerializeField] protected PlayerList _readyList;
+        [SerializeField] protected string _gameplayScene;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _joinedList.Clear();
             _readyList.Clear();
         }
 
-        public void OnPlayerJoined(PlayerInput playerInput)
+        public virtual void OnPlayerJoined(PlayerInput playerInput)
         {
             playerInput.transform.SetParent(transform, false);
             int playerIndex = playerInput.playerIndex;
@@ -29,7 +29,7 @@ namespace CharacterSelect
             _playerJoinedEvent.Invoke(new PlayerInfo(playerIndex, color, playerInput.devices));
         }
 
-        public void CheckQueue()
+        public virtual void CheckQueue()
         {
             if (_readyList.Count == _joinedList.Count)
             {

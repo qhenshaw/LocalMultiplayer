@@ -5,27 +5,22 @@ using UnityEngine.InputSystem;
 
 namespace CharacterSelect
 {
+    [RequireComponent(typeof(PlayerInputManager))]
     public class PlayerSpawner : MonoBehaviour
     {
-        [SerializeField] private PlayerList _readied;
-        [SerializeField] private GameObject _playerPrefab;
+        [SerializeField] protected PlayerList _readied;
+        [SerializeField] protected GameObject _playerPrefab;
+        [SerializeField] protected Transform[] _spawnPoints;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _playerInputManager = GetComponent<PlayerInputManager>();
             _playerInputManager.playerPrefab = _playerPrefab;
         }
 
-        private Vector3[] _offsets = new[]
-        {
-        new Vector3(1f, 0f, 1f),
-        new Vector3(1f, 0f, -1f),
-        new Vector3(-1f, 0f, -1f),
-        new Vector3(-1f, 0f, 1f),
-    };
-        private PlayerInputManager _playerInputManager;
+        protected PlayerInputManager _playerInputManager;
 
-        private void Start()
+        protected virtual void Start()
         {
             for (int i = 0; i < _readied.Count; i++)
             {
@@ -34,7 +29,7 @@ namespace CharacterSelect
 
                 PlayerInput input = _playerInputManager.JoinPlayer(i, i, "Gamepad", info.GetDevices());
                 GameObject player = input.gameObject;
-                player.transform.position = transform.position + _offsets[i];
+                player.transform.position = _spawnPoints[i].position;
                 player.transform.SetParent(transform, true);
 
                 SkinnedMeshRenderer[] renderers = player.GetComponentsInChildren<SkinnedMeshRenderer>();

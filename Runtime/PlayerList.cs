@@ -11,6 +11,7 @@ namespace CharacterSelect
     {
         [SerializeField] private List<PlayerInfo> _players = new List<PlayerInfo>();
 
+        public List<PlayerInfo> Players => _players;
         public int Count => _players.Count;
 
         public void AddPlayer(PlayerInfo playerInfo)
