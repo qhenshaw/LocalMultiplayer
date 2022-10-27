@@ -14,9 +14,9 @@
   },
   "samples": [
 	{
-      "displayName": "Character Select + Gameplay",
+      "displayName": "Character Select",
       "description": "Example character select screen that loads into gameplay.",
-      "path": "Samples~/CharacterSelectPlusGameplay"
+      "path": "Samples~/CharacterSelect"
     }
   ]
 }
