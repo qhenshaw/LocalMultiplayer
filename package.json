@@ -1,0 +1,22 @@
+{
+  "displayName": "Local Multiplayer",
+  "author": "Quin Henshaw",
+  "version": "1.0.0",
+  "name": "com.qhenshaw.localmultiplayer",
+  "documentationUrl": "https://github.com/qhenshaw/LocalMultiplayer",
+  "changelogUrl": "https://github.com/qhenshaw/LocalMultiplayer/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/qhenshaw/LocalMultiplayer/blob/main/LICENSE.md",
+  "description": "Local multiplayer components with example character select and gameplay scenes.",
+  "unity": "2020.1",
+  "dependencies": {
+    "com.unity.cinemachine": "2.8.9",
+	"com.unity.inputsystem": "1.3.0"
+  },
+  "samples": [
+	{
+      "displayName": "Character Select + Gameplay",
+      "description": "Example character select screen that loads into gameplay.",
+      "path": "Samples~/CharacterSelectPlusGameplay"
+    }
+  ]
+}
