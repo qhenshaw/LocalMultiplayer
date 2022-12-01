@@ -8,9 +8,10 @@
   "licensesUrl": "https://github.com/qhenshaw/LocalMultiplayer/blob/main/LICENSE.md",
   "description": "Local multiplayer components with example character select and gameplay scenes.",
   "unity": "2020.1",
-  "gitDependencies": {
-	"com.qhenshaw.charactermovement": "https://github.com/qhenshaw/CharacterMovement.git",
-	"com.qhenshaw.gameevents": "https://github.com/qhenshaw/GameEvents.git"
+  "dependencies": {
+    "com.unity.cinemachine": "2.x.x",
+	"com.unity.inputsystem": "1.x.x",
+	"com.unity.textmeshpro": "3.x.x"
   },
   "samples": [
 	{
