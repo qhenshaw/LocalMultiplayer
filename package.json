@@ -1,7 +1,7 @@
 {
   "displayName": "Local Multiplayer",
   "author": "Quin Henshaw",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "name": "com.qhenshaw.localmultiplayer",
   "documentationUrl": "https://github.com/qhenshaw/LocalMultiplayer",
   "changelogUrl": "https://github.com/qhenshaw/LocalMultiplayer/blob/main/CHANGELOG.md",
@@ -9,9 +9,9 @@
   "description": "Local multiplayer components with example character select and gameplay scenes.",
   "unity": "2020.1",
   "dependencies": {
-    "com.unity.cinemachine": "2.x.x",
-	"com.unity.inputsystem": "1.x.x",
-	"com.unity.textmeshpro": "3.x.x"
+    "com.unity.cinemachine": "2.8.9",
+	"com.unity.inputsystem": "1.4.4",
+	"com.unity.textmeshpro": "3.0.6"
   },
   "samples": [
 	{
